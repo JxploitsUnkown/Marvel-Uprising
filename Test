@@ -1,0 +1,75 @@
+if game.PlaceId == 6754315100 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Marvel Uprising", "Sentinel")
+
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local CharacterSection = Main:NewSection("Gamepass/Coins Characters")
+    CharacterSection:NewButton("Owners Phoenix", "Limited Owners Phoenix", function()
+        local A_1 = "Owner's Phoenix"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+    CharacterSection:NewButton("Dark Phoenix", "Limited Dark Phoenix", function()
+        local A_1 = "Dark Phoenix"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+    CharacterSection:NewButton("Phoenix", "Phoenix skin", function()
+        local A_1 = "Phoenix"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+    CharacterSection:NewButton("Magik", "Limited Magik", function()
+        local A_1 = "Magik"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+    CharacterSection:NewButton("Scarlet Witch", "Access to Scarlet Witch", function()
+        local A_1 = "Scarlet Witch"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+    CharacterSection:NewButton("Wiccan", "Access to Wiccan", function()
+        local A_1 = "Wiccan"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+    CharacterSection:NewButton("Speed", "Access to Speed", function()
+        local A_1 = "Speed"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+    CharacterSection:NewButton("Rogue", "Access to Rogue", function()
+        local A_1 = "Rogue"
+        local A_2 = "STOP_EXPLOITING"
+        local Event = game:GetService("ReplicatedStorage").SetSubject
+        Event:FireServer(A_1, A_2)
+    end)
+
+
+    -- PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+    PlayerSection:NewSlider("WalkSpeed", "Increase/Decrease your walkspeed", 250, 16, function(v) -- 250 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+
+        PlayerSection:NewSlider("JumpPower", "Increase/Decrease your jump power", 300, 50, function(v) -- 300 (MaxValue) | 0 (MinValue)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+    end
